@@ -1,0 +1,12 @@
+
+start = acme-record / bundle / tstr
+        
+
+; All ACME records have the same structure
+$admin-record /= [0xFFFF, acme-record]
+acme-record = {
+  token-part1,
+  ? key-auth-digest ; present for Response Bundles
+}
+token-part1 = (1 => bstr)
+key-auth-digest = (2 => bstr)
