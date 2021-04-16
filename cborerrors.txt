@@ -64,9 +64,11 @@ INFO:root:Processing element text:
       57                                # bytes(23)
          8219ffffa10150a77c916055382b1c1068742327645d89 # "\x82\x19\xFF\xFF\xA1\x01P\xA7|\x91`U8+\x1C\x10ht#'d]\x89"
 INFO:root:Processing element text:
-"p3yRYFU4KxwQaHQjJ2RdiQtPUZNY4ONIk6LxErRFEjVw.LPJNul-wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ"
-78 58                                   # text(88)
-   70337952594655344b7877516148516a4a32526469517450555a4e59344f4e496b364c7845725246456a56772e4c504a4e756c2d776f77346d3644737178626e696e687357486c776670304a656377517a59704f4c6d4351 # "p3yRYFU4KxwQaHQjJ2RdiQtPUZNY4ONIk6LxErRFEjVw.LPJNul-wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ"
+"p3yRYFU4KxwQaHQjJ2RdiQtPUZNY4ONIk6LxErRFEjVw."
+"LPJNul-wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ"
+*** can't parse "p3yRYFU4KxwQaHQjJ2RdiQtPUZNY4ONIk6LxErRFEjVw."
+"LPJNul-wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ"
+*** Expected one of [ \t\n\r], "/", ',' at line 2, column 1 (byte 49) after 
 INFO:root:Processing element text:
 [
   [
@@ -84,11 +86,12 @@ INFO:root:Processing element text:
     1, / block number /
     0, / flags /
     0, / CRC type: none /
-    <<[ / type-specific data /
+    <<[ / block-type-specific data /
       0xFFFF, / record-type-code /
       { / record-content /
         1: b64'p3yRYFU4KxwQaHQjJ2RdiQ', / token-part1 /
-        2: b64'mVIOJEQZie8XpYM6MMVSQUiNPH64URnhM9niJ5XHrew' / key auth. digest /
+        2: b64'mVIOJEQZie8XpYM6MMVSQUiNPH64URnhM9niJ5XHrew'
+        / key auth. digest /
       }
     ]>>
   ]
