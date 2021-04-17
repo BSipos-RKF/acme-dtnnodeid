@@ -10,6 +10,7 @@ Expires: 19 October 2021
 
    Automated Certificate Management Environment (ACME) Delay-Tolerant
              Networking (DTN) Node ID Validation Extension
+                      draft-ietf-acme-dtnnodeid-02
 
 Abstract
 
@@ -42,6 +43,21 @@ Copyright Notice
    Copyright (c) 2021 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
+
+
+
+
+
+
+
+
+
+
+Sipos                    Expires 19 October 2021                [Page 1]
+
+Internet-Draft              ACME DTN Node ID                  April 2021
+
+
    This document is subject to BCP 78 and the IETF Trust's Legal
    Provisions Relating to IETF Documents (https://trustee.ietf.org/
    license-info) in effect on the date of publication of this document.
@@ -51,16 +67,9 @@ Copyright Notice
    as described in Section 4.e of the Trust Legal Provisions and are
    provided without warranty as described in the Simplified BSD License.
 
-
-
-Sipos                    Expires 19 October 2021                [Page 1]
-
-Internet-Draft              ACME DTN Node ID                  April 2021
-
-
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   3
      1.1.  Scope . . . . . . . . . . . . . . . . . . . . . . . . . .   3
      1.2.  Authorization Strategy  . . . . . . . . . . . . . . . . .   4
      1.3.  Use of CDDL . . . . . . . . . . . . . . . . . . . . . . .   5
@@ -97,15 +106,6 @@ Table of Contents
      B.2.  Response Bundle . . . . . . . . . . . . . . . . . . . . .  23
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .  24
 
-1.  Introduction
-
-   Although the original purpose of the Automatic Certificate Management
-   Environment (ACME) [RFC8555] was to allow Public Key Infrastructure
-   Using X.509 (PKIX) certificate authorities to validate network domain
-   names of clients, the same mechanism can be used to validate any of
-   the subject claims supported by the PKIX profile [RFC5280].
-
-
 
 
 
@@ -113,6 +113,14 @@ Sipos                    Expires 19 October 2021                [Page 2]
 
 Internet-Draft              ACME DTN Node ID                  April 2021
 
+
+1.  Introduction
+
+   Although the original purpose of the Automatic Certificate Management
+   Environment (ACME) [RFC8555] was to allow Public Key Infrastructure
+   Using X.509 (PKIX) certificate authorities to validate network domain
+   names of clients, the same mechanism can be used to validate any of
+   the subject claims supported by the PKIX profile [RFC5280].
 
    In the case of this specification, the claim being validated is a
    Subject Alternative Name (SAN) of type Uniform Resource Identifier
@@ -153,6 +161,15 @@ Internet-Draft              ACME DTN Node ID                  April 2021
       integrity gateways, or trusting integrity gateways on an
       individual entity or across a network.
 
+
+
+
+
+Sipos                    Expires 19 October 2021                [Page 3]
+
+Internet-Draft              ACME DTN Node ID                  April 2021
+
+
    *  Mechanisms for locating or identifying other bundle entities
       (peers) within a network or across an internet.  The mapping of
       Node ID to potential convergence layer (CL) protocol and network
@@ -162,13 +179,6 @@ Internet-Draft              ACME DTN Node ID                  April 2021
    *  Logic for routing bundles along a path toward a bundle's endpoint.
       This protocol is involved only in creating bundles at a source and
       handling them at a destination.
-
-
-
-Sipos                    Expires 19 October 2021                [Page 3]
-
-Internet-Draft              ACME DTN Node ID                  April 2021
-
 
    *  Logic for performing rate control and congestion control of bundle
       transfers.  The ACME server is responsible for rate control of
@@ -208,16 +218,6 @@ Internet-Draft              ACME DTN Node ID                  April 2021
    digest was generated for the associated ACME challenge and from the
    client account key associated with the original request.
 
-   Because the DTN Node ID is used both for routing bundles between BP
-   agents and for multiplexing services within a BP agent, there is no
-   possibility to separate the ACME validation of a Node ID from normal
-   bundle handling on that same Node ID.  This leaves Bundle
-   administrative records as a way to leave the Node ID unchanged while
-   disambiguating from normal service data bundles.
-
-
-
-
 
 
 
@@ -225,6 +225,13 @@ Sipos                    Expires 19 October 2021                [Page 4]
 
 Internet-Draft              ACME DTN Node ID                  April 2021
 
+
+   Because the DTN Node ID is used both for routing bundles between BP
+   agents and for multiplexing services within a BP agent, there is no
+   possibility to separate the ACME validation of a Node ID from normal
+   bundle handling on that same Node ID.  This leaves Bundle
+   administrative records as a way to leave the Node ID unchanged while
+   disambiguating from normal service data bundles.
 
 1.3.  Use of CDDL
 
@@ -266,13 +273,6 @@ Internet-Draft              ACME DTN Node ID                  April 2021
    Response Bundle:  This is a shortened form of the full "ACME Node ID
       Validation Response Bundle".  It is a Bundle created by the BP
       agent managed by the ACME client to validate a Node ID claim.
-
-
-
-
-
-
-
 
 
 
