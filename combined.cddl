@@ -5,13 +5,11 @@ start = acme-record / bundle / tstr
 ; All ACME records have the same structure
 $admin-record /= [0xFFFF, acme-record]
 acme-record = {
-  token-chal,
-  token-bundle,
+  token-part1,
   ? key-auth-digest ; present for Response Bundles
 }
-token-chal = (1 => bstr)
-token-bundle = (2 => bstr)
-key-auth-digest = (3 => bstr)
+token-part1 = (1 => bstr)
+key-auth-digest = (2 => bstr)
 bpv7_start = bundle / #6.55799(bundle)
 
 ; Times before 2000 are invalid
