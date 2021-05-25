@@ -33,7 +33,7 @@ INFO:root:Processing element text:
     ]>>
   ]
 ]
-/var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:216:in `parse': 809: unexpected token at '*** can't parse [ (JSON::ParserError)
+/usr/lib/ruby/2.7.0/json/common.rb:156:in `parse': 783: unexpected token at '*** can't parse [ (JSON::ParserError)
   [
     7, / BP version /
     0x22, / flags: user-app-ack, payload-is-an-admin-record /
@@ -80,8 +80,8 @@ INFO:root:Processing element text:
         1: b64'tPUZNY4ONIk6LxErRFEjVw' / token-chal /
         
 '
-	from /var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:216:in `parse'
-	from /var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:569:in `load'
+	from /usr/lib/ruby/2.7.0/json/common.rb:156:in `parse'
+	from /usr/lib/ruby/2.7.0/json/common.rb:335:in `load'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:97:in `rescue in block in <top (required)>'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:97:in `block in <top (required)>'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:92:in `each'
@@ -98,12 +98,12 @@ INFO:root:Processing element text:
 INFO:root:Processing element text:
 "p3yRYFU4KxwQaHQjJ2RdiQtPUZNY4ONIk6LxErRFEjVw."
 "LPJNul-wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ"
-/var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:216:in `parse': 809: unexpected token at '*** can't parse "p3yRYFU4KxwQaHQjJ2RdiQtPUZNY4ONIk6LxErRFEjVw." (JSON::ParserError)
+/usr/lib/ruby/2.7.0/json/common.rb:156:in `parse': 783: unexpected token at '*** can't parse "p3yRYFU4KxwQaHQjJ2RdiQtPUZNY4ONIk6LxErRFEjVw." (JSON::ParserError)
 "LPJNul-wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ"
 *** Expected one of [ \\t\\n\\r], "/", ',' at line 2, column 1 (byte 49) after 
 '
-	from /var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:216:in `parse'
-	from /var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:569:in `load'
+	from /usr/lib/ruby/2.7.0/json/common.rb:156:in `parse'
+	from /usr/lib/ruby/2.7.0/json/common.rb:335:in `load'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:97:in `rescue in block in <top (required)>'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:97:in `block in <top (required)>'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:92:in `each'
@@ -145,7 +145,7 @@ INFO:root:Processing element text:
     ]>>
   ]
 ]
-/var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:216:in `parse': 809: unexpected token at '*** can't parse [ (JSON::ParserError)
+/usr/lib/ruby/2.7.0/json/common.rb:156:in `parse': 783: unexpected token at '*** can't parse [ (JSON::ParserError)
   [
     7, / BP version /
     0x02, / flags: payload-is-an-admin-record /
@@ -194,8 +194,8 @@ INFO:root:Processing element text:
         1: b64'tPUZNY4ONIk6LxErRFEjVw' / token-chal /
         
 '
-	from /var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:216:in `parse'
-	from /var/lib/gems/2.7.0/gems/json-2.5.1/lib/json/common.rb:569:in `load'
+	from /usr/lib/ruby/2.7.0/json/common.rb:156:in `parse'
+	from /usr/lib/ruby/2.7.0/json/common.rb:335:in `load'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:97:in `rescue in block in <top (required)>'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:97:in `block in <top (required)>'
 	from /var/lib/gems/2.7.0/gems/cddl-0.8.24/bin/cddl:92:in `each'
