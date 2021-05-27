@@ -4,9 +4,9 @@
 
 Automated Certificate Management Environment                    B. Sipos
 Internet-Draft                                           RKF Engineering
-Updates: -ietf-dtn-bpbis (if approved)                       26 May 2021
+Updates: -ietf-dtn-bpbis (if approved)                       27 May 2021
 Intended status: Experimental                                           
-Expires: 27 November 2021
+Expires: 28 November 2021
 
 
    Automated Certificate Management Environment (ACME) Delay-Tolerant
@@ -37,7 +37,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 27 November 2021.
+   This Internet-Draft will expire on 28 November 2021.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Sipos                   Expires 27 November 2021                [Page 1]
+Sipos                   Expires 28 November 2021                [Page 1]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -86,7 +86,7 @@ Table of Contents
    5.  Certificate Request Profile . . . . . . . . . . . . . . . . .  16
      5.1.  Multiple Identity Claims  . . . . . . . . . . . . . . . .  16
      5.2.  Generating Encryption-only or Signing-only Bundle Security
-           Certificates  . . . . . . . . . . . . . . . . . . . . . .  17
+           Certificates  . . . . . . . . . . . . . . . . . . . . . .  16
    6.  Bundle Protocol Administrative Record Types Registry  . . . .  17
    7.  Implementation Status . . . . . . . . . . . . . . . . . . . .  17
    8.  Security Considerations . . . . . . . . . . . . . . . . . . .  18
@@ -104,12 +104,12 @@ Table of Contents
      11.2.  Informative References . . . . . . . . . . . . . . . . .  23
    Appendix A.  Administrative Record Types CDDL . . . . . . . . . .  25
    Appendix B.  Example Authorization  . . . . . . . . . . . . . . .  25
-     B.1.  Challenge Bundle  . . . . . . . . . . . . . . . . . . . .  25
+     B.1.  Challenge Bundle  . . . . . . . . . . . . . . . . . . . .  26
      B.2.  Response Bundle . . . . . . . . . . . . . . . . . . . . .  26
 
 
 
-Sipos                   Expires 27 November 2021                [Page 2]
+Sipos                   Expires 28 November 2021                [Page 2]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -146,7 +146,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
    The scope and behavior of this validation mechanism is similar to
    that of secured email validation of [RFC8823].
 
-   This docuemnt also updates BPv7 to explicitly use the IANA
+   This document also updates BPv7 to explicitly use the IANA
    administrative record type registry in Section 6.
 
 1.1.  Scope
@@ -165,7 +165,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021                [Page 3]
+Sipos                   Expires 28 November 2021                [Page 3]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -221,7 +221,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021                [Page 4]
+Sipos                   Expires 28 November 2021                [Page 4]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -277,7 +277,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021                [Page 5]
+Sipos                   Expires 28 November 2021                [Page 5]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -333,7 +333,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021                [Page 6]
+Sipos                   Expires 28 November 2021                [Page 6]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -389,7 +389,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021                [Page 7]
+Sipos                   Expires 28 November 2021                [Page 7]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -445,7 +445,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021                [Page 8]
+Sipos                   Expires 28 November 2021                [Page 8]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -501,7 +501,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021                [Page 9]
+Sipos                   Expires 28 November 2021                [Page 9]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -557,7 +557,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 10]
+Sipos                   Expires 28 November 2021               [Page 10]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -602,18 +602,18 @@ Internet-Draft              ACME DTN Node ID                    May 2021
    contain an RTT, SHOULD be a configurable parameter of the ACME
    server.  If the ACME client indicated an RTT value in the object, the
    response interval SHOULD be twice the RTT (with limiting logic
-   applied as described below).  The lower limit on response waiting
-   time is network-specific, but SHOULD NOT be shorter than one second.
-   The upper limit on response waiting time is network-specific, but
-   SHOULD NOT be longer than one minute (60 seconds) for a terrestrial-
-   only DTN.
+   applied as described below).  The lower limit on response interval is
+   network-specific, but SHOULD NOT be shorter than one second.  The
+   upper limit on response interval is network-specific, but SHOULD NOT
+   be longer than one minute (60 seconds) for a terrestrial-only DTN.
 
 
 
 
 
 
-Sipos                   Expires 27 November 2021               [Page 11]
+
+Sipos                   Expires 28 November 2021               [Page 11]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -669,7 +669,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 12]
+Sipos                   Expires 28 November 2021               [Page 12]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -725,7 +725,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 13]
+Sipos                   Expires 28 November 2021               [Page 13]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -781,7 +781,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 14]
+Sipos                   Expires 28 November 2021               [Page 14]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -813,40 +813,35 @@ Internet-Draft              ACME DTN Node ID                    May 2021
       same Node ID, the "token-bundle" in the response is needed to
       correlate with the expected Key Authorization digest.
 
-   Any of the failures above SHALL cause the validation to fail.  Any of
-   the failures above SHOULD be indicated as subproblems to the ACME
-   client.
+   Any of the failures above SHALL cause the validation to fail with an
+   ACME error type of "incorrectResponse".  Any of the failures above
+   SHOULD be indicated as subproblems to the ACME client.  The lack of a
+   response within the expected response interval, as defined in
+   Section 3.2, SHALL also be treated as a validation failure.
 
 4.  Bundle Integrity Gateway
 
    This section defines a BIB use which closely resembles the function
    of DKIM email signing [RFC6376].  In this mechanism a routing node in
-   a DTN sub-network vouches for the origination of a bundle by adding a
+   a DTN sub-network attests to the origination of a bundle by adding a
    BIB before forwarding it.  The bundle receiver then need not trust
    the source of the bundle, but only trust this security source node.
-   The receiver needs policy configuration to know which security source
-   is permitted to vouch for which bundle sources.
-
-
-
-
-
-
-
-
-
-
-
-Sipos                   Expires 27 November 2021               [Page 15]
-
-Internet-Draft              ACME DTN Node ID                    May 2021
-
+   The receiver needs policy configuration to know which security
+   sources are permitted to attest for which bundle sources.
 
    An integrity gateway SHALL validate the Source Node ID of a bundle,
    using local-network-specific means, before adding a BIB to the
    bundle.  The exact means by which an integrity gateway validates a
    bundle's source is network-specific, but could use physical-layer,
    network-layer or BP-convergence-layer authentication.  The bundle
+
+
+
+Sipos                   Expires 28 November 2021               [Page 15]
+
+Internet-Draft              ACME DTN Node ID                    May 2021
+
+
    source could also add its own BIB with a local-network-specific
    security context or local-network-specific key material (i.e. a group
    key shared within the local network).
@@ -890,19 +885,18 @@ Internet-Draft              ACME DTN Node ID                    May 2021
    authenticate both the DNS name of an entity as well as the Node ID of
    the entity.
 
-
-
-
-Sipos                   Expires 27 November 2021               [Page 16]
-
-Internet-Draft              ACME DTN Node ID                    May 2021
-
-
 5.2.  Generating Encryption-only or Signing-only Bundle Security
       Certificates
 
    ACME extensions specified in this document can be used to request
    encryption-only or signing-only bundle security certificates.
+
+
+
+Sipos                   Expires 28 November 2021               [Page 16]
+
+Internet-Draft              ACME DTN Node ID                    May 2021
+
 
    In order to request signing only bundle security certificate, the CSR
    MUST include the key usage extension with digitalSignature and/or
@@ -934,9 +928,11 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 7.  Implementation Status
 
+   This section is to be removed before publishing as an RFC.
+
    [NOTE to the RFC Editor: please remove this section before
    publication, as well as the reference to [RFC7942] and
-   [github-acme-dtnnodeid].]
+   [github-dtn-demo-agent] and [github-dtn-wireshark].]
 
    This section records the status of known implementations of the
    protocol defined by this specification at the time of posting of this
@@ -946,24 +942,27 @@ Internet-Draft              ACME DTN Node ID                    May 2021
    RFCs.  Please note that the listing of any individual implementation
    here does not imply endorsement by the IETF.  Furthermore, no effort
    has been spent to verify the information presented here that was
-
-
-
-Sipos                   Expires 27 November 2021               [Page 17]
-
-Internet-Draft              ACME DTN Node ID                    May 2021
-
-
    supplied by IETF contributors.  This is not intended as, and must not
    be construed to be, a catalog of available implementations or their
    features.  Readers are advised to note that other implementations can
    exist.
 
-   An example implementation of the this draft of ACME has been created
-   as a GitHub project [github-acme-dtnnodeid] and is intended to use as
-   a proof-of-concept and as a possible source of interoperability
-   testing.  This example implementation only constructs encoded bundles
-   and does not attempt to provide a full BP Agent interface.
+
+
+Sipos                   Expires 28 November 2021               [Page 17]
+
+Internet-Draft              ACME DTN Node ID                    May 2021
+
+
+   An example implementation of the this draft of ACME Node ID
+   Validation has been created as a GitHub project
+   [github-dtn-demo-agent] and is intended to use as a proof-of-concept
+   and as a possible source of interoperability testing.
+
+   A Wireshark dissector for of the this draft of ACME Node ID
+   Validation has been created as a GitHub project
+   [github-dtn-wireshark] and is intended to be used to inspect and
+   troubleshoot implementations.
 
 8.  Security Considerations
 
@@ -1005,7 +1004,8 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 18]
+
+Sipos                   Expires 28 November 2021               [Page 18]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -1061,7 +1061,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 19]
+Sipos                   Expires 28 November 2021               [Page 19]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -1117,7 +1117,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 20]
+Sipos                   Expires 28 November 2021               [Page 20]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -1143,7 +1143,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
    entries have been added to the "Bundle Administrative Record Types"
    sub-registry.  [NOTE to the RFC Editor: For RFC5050 compatibility the
    TBD value needs to be no larger than 15, but such compatibility is
-   not needed.  For BPbis the TBD value nees to be no larger than
+   not needed.  For BPbis the TBD value needs to be no larger than
    65535.]
 
    +=================+==========+======================+===============+
@@ -1173,7 +1173,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 21]
+Sipos                   Expires 28 November 2021               [Page 21]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -1229,7 +1229,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 22]
+Sipos                   Expires 28 November 2021               [Page 22]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -1285,7 +1285,7 @@ Internet-Draft              ACME DTN Node ID                    May 2021
 
 
 
-Sipos                   Expires 27 November 2021               [Page 23]
+Sipos                   Expires 28 November 2021               [Page 23]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
@@ -1332,19 +1332,24 @@ Internet-Draft              ACME DTN Node ID                    May 2021
               <https://tools.ietf.org/html/draft-bsipos-dtn-bpsec-cose-
               05>.
 
-   [github-acme-dtnnodeid]
-              Sipos, B., "ACME Node ID Example Implementation",
-              <https://github.com/BSipos-RKF/acme-dtnnodeid/>.
+   [github-dtn-demo-agent]
+              Sipos, B., "Python implementation of basic BPv7-related
+              protocols",
+              <https://github.com/BSipos-RKF/dtn-demo-agent/>.
 
 
 
 
 
-
-Sipos                   Expires 27 November 2021               [Page 24]
+Sipos                   Expires 28 November 2021               [Page 24]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
+
+   [github-dtn-wireshark]
+              Sipos, B., "Wireshark Dissectors for BPv7-related
+              Protocols",
+              <https://github.com/BSipos-RKF/dtn-wireshark/>.
 
 Appendix A.  Administrative Record Types CDDL
 
@@ -1387,6 +1392,16 @@ Appendix B.  Example Authorization
 
    "tPUZNY4ONIk6LxErRFEjVw"
 
+
+
+
+
+
+Sipos                   Expires 28 November 2021               [Page 25]
+
+Internet-Draft              ACME DTN Node ID                    May 2021
+
+
 B.1.  Challenge Bundle
 
    For the single challenge bundle in this example, the "token-bundle"
@@ -1394,13 +1409,6 @@ B.1.  Challenge Bundle
    of:
 
    "p3yRYFU4KxwQaHQjJ2RdiQ"
-
-
-
-Sipos                   Expires 27 November 2021               [Page 25]
-
-Internet-Draft              ACME DTN Node ID                    May 2021
-
 
    The minimal-but-valid Challenge Bundle is shown in Figure 2.  This
    challenge requires that the ACME client respond within a 60 second
@@ -1443,20 +1451,16 @@ B.2.  Response Bundle
    "p3yRYFU4KxwQaHQjJ2RdiQtPUZNY4ONIk6LxErRFEjVw."
    "LPJNul-wow4m6DsqxbninhsWHlwfp0JecwQzYpOLmCQ"
 
-   The minimal-but-valid Response Bundle is shown in Figure 3.  This
-   response indicates that there is 30 seconds remaining in the response
-   time window.
 
 
-
-
-
-
-
-Sipos                   Expires 27 November 2021               [Page 26]
+Sipos                   Expires 28 November 2021               [Page 26]
 
 Internet-Draft              ACME DTN Node ID                    May 2021
 
+
+   The minimal-but-valid Response Bundle is shown in Figure 3.  This
+   response indicates that there is 30 seconds remaining in the response
+   time window.
 
    [
      [
@@ -1505,8 +1509,4 @@ Author's Address
 
 
 
-
-
-
-
-Sipos                   Expires 27 November 2021               [Page 27]
+Sipos                   Expires 28 November 2021               [Page 27]
